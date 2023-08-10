@@ -1,7 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Lato, Oswald } from 'next/font/google'
-import Navigation from '../components/Navigation'
 
 
 const lato = Lato({
@@ -32,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${oswald.variable} ${lato.variable}`}>
-        <Navigation/>
         {children}
       </body>
     </html>

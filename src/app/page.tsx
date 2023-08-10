@@ -1,17 +1,72 @@
-import Image from 'next/image'
+"use client";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(true);
+  const router = useRouter();
 
-  const handleScroll = () => {
-    
-  }
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(false);
+        }, 3000); // Delay of 5 seconds
 
-  return (
-    <main className="home flex min-h-screen flex-col items-center p-24">
-      <div className=" max-w-5xl w-full items-center flex flex-col align-middle font-oswald">
-        <h1 className='text-6xl self-start my-10 text-slate-700'>Full Stack Web Developer</h1>
-        <p className='w-1/2 self-start text-slate-500'>Full Stack Developer with a passion for blending front-end creativity with technical precision to create compelling digital experiences. My passion for innovation fuels my desire to explore new technologies and design trends, striving for excellence in both form and function.</p>
-      </div>
-    </main>
-  )
+        return () => {
+            clearTimeout(timer);
+        };
+    }, []); // scroll up animation for full page
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            router.push("/about");
+        }, 4000); // navigate to about after animations done
+
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [router]);
+
+    return (
+        <div>
+            <motion.div
+                className="box"
+                initial={{ opacity: 0, y: 0 }}
+                animate={{
+                    opacity: isVisible ? 1 : 0,
+                    y: isVisible ? 0 : -100,
+                }}
+                transition={{
+                    duration: 0.75,
+                }}
+            >
+                <div className="min-h-screen bg-slate-900 text-slate-50 flex flex-col justify-center items-center text-center text-6xl">
+                    <motion.h1
+                        className="box"
+                        initial={{ opacity: 0, scale: 0.5, y: 0 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{
+                            duration: 2,
+                            delay: 0.5,
+                            ease: [0, 0.71, 0.2, 1.01],
+                        }}
+                    >
+                        <h1>Kendall Cercone</h1>
+                    </motion.h1>
+                    <motion.h2
+                        className="box"
+                        initial={{ opacity: 0, scale: 0.5, y: 0 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{
+                            duration: 2,
+                            delay: 1.5,
+                            ease: [0, 0.71, 0.2, 1.01],
+                        }}
+                    >
+                        <h2>Full Stack Developer</h2>
+                    </motion.h2>
+                </div>
+            </motion.div>
+        </div>
+    );
 }
