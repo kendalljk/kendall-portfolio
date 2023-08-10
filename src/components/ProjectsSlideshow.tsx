@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion";
+import { ImgProps } from 'next/dist/shared/lib/get-img-props';
 
 type SlideShowProps = {
-  image: 
+  image: ImgProps
 }
 
 const ProjectsSlideshow = ({image}: SlideShowProps) => {

@@ -6,11 +6,11 @@ const Navigation = () => {
     const pathname = usePathname(); // to conditionally underline active pathname
     return (
         <nav className="flex w-full fixed font-lato">
-            <div className="navlinks m-4 text-sm text-cyan-800 self-center uppercase w-full flex justify-between">
+            <div className="navlinks my-4 text-sm text-cyan-800 self-center uppercase w-full flex justify-around">
                 <div>
                     <Link
                         href="/about"
-                        className={`m-4 ${
+                        className={`mx-4 ${
                             pathname === "/about"
                                 ? "underline underline-offset-8"
                                 : ""
@@ -20,7 +20,7 @@ const Navigation = () => {
                     </Link>
                     <Link
                         href="/work"
-                        className={`m-4 ${
+                        className={`${
                             pathname === "/work"
                                 ? "underline underline-offset-8"
                                 : ""
@@ -39,10 +39,10 @@ const Navigation = () => {
                 <div>
                     <Link
                         href="/contact"
-                        className={`m-4 ${
+                        className={` ${
                             pathname === "/contact"
                                 ? "underline underline-offset-8"
-                                : "bg-cyan-800 py-3 px-4 rounded-2xl text-slate-50"
+                                : "my-4 bg-cyan-800 py-2 px-4 rounded-2xl text-slate-50"
                         }`}
                     >
                         Contact
