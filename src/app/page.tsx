@@ -51,7 +51,7 @@ export default function Home() {
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
                     >
-                        <h1>Kendall Cercone</h1>
+                        Kendall Cercone
                     </motion.h1>
                     <motion.h2
                         className="box"
@@ -63,7 +63,7 @@ export default function Home() {
                             ease: [0, 0.71, 0.2, 1.01],
                         }}
                     >
-                        <h2>Full Stack Developer</h2>
+                        Full Stack Developer
                     </motion.h2>
                 </div>
             </motion.div>
