@@ -1,72 +1,104 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import Navigation from "../components/Navigation";
+import Sidebar from "../components/Sidebar";
+import LoadingPage from "../components/LoadingPage";
+import Image from "next/image";
+import placeholder from "../app/icons/photos/placeholder.jpg";
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(true);
-  const router = useRouter();
+    const [isVisible, setIsVisible] = useState(true);
+    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsVisible(false);
-        }, 3000); // Delay of 5 seconds
-
-        return () => {
-            clearTimeout(timer);
-        };
-    }, []); // scroll up animation for full page
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            router.push("/about");
-        }, 4000); // navigate to about after animations done
-
-        return () => {
-            clearTimeout(timer);
-        };
-    }, [router]);
+    const hideDuringLoading = (loading: boolean) => {
+        if (loading === true) {
+            return `hidden`;
+        } else {
+            return ``;
+        }
+    };
 
     return (
-        <div>
-            <motion.div
-                className="box"
-                initial={{ opacity: 0, y: 0 }}
-                animate={{
-                    opacity: isVisible ? 1 : 0,
-                    y: isVisible ? 0 : -100,
-                }}
-                transition={{
-                    duration: 0.75,
-                }}
-            >
-                <div className="min-h-screen bg-slate-900 text-slate-50 flex flex-col justify-center items-center text-center text-6xl">
-                    <motion.h1
-                        className="box"
-                        initial={{ opacity: 0, scale: 0.5, y: 0 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        transition={{
-                            duration: 2,
-                            delay: 0.5,
-                            ease: [0, 0.71, 0.2, 1.01],
-                        }}
-                    >
-                        Kendall Cercone
-                    </motion.h1>
-                    <motion.h2
-                        className="box"
-                        initial={{ opacity: 0, scale: 0.5, y: 0 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        transition={{
-                            duration: 2,
-                            delay: 1.5,
-                            ease: [0, 0.71, 0.2, 1.01],
-                        }}
-                    >
-                        Full Stack Developer
-                    </motion.h2>
+        <main className="flex flex-col min-h-screen min-w-full">
+            <LoadingPage
+                isVisible={isVisible}
+                setIsVisible={setIsVisible}
+                loading={loading}
+                setLoading={setLoading}
+            />
+            {!loading && <Navigation />}
+            {!loading && <Sidebar />}
+            <section className={`about ${hideDuringLoading(loading)} flex justify-end`}>
+                <div className="flex min-w-full">
+                    <div className="w-full mt-20 flex justify-end">
+                        <div className="w-2/3">
+                            <p className="text-slate-00">
+                                {`Hey, I'm Kendall. What started as a hobby turned
+                            into a passionate pursuit, propelling me into the
+                            dynamic world of technology. With a background in
+                            healthcare and communication, I've learned the
+                            importance of attention to detail and a resillient
+                            and collaborative approach to problem-solving. Now,
+                            as I dive into coding, I'm excited to bring that
+                            same dedication to creating innovative and
+                            user-centered web experiences.`}
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </motion.div>
-        </div>
+            </section>
+            <section className={`projects ${hideDuringLoading(loading)} flex justify-end`}>
+                <div className="flex w-2/3 justify-end">
+                    <div className=" mt-10 flex justify-center">
+                        <div className="flex flex-col items-center">
+                            <h1 className="text-2xl">Projects</h1>
+                            <Image
+                                src={placeholder}
+                                alt="placeholder image"
+                                width={800}
+                                height={100}
+                                className="mt-10"
+                            />
+                            <p className="mx-20 text-slate-500 italic">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Fuga quasi illo mollitia
+                                perferendis, odit adipisci assumenda esse
+                                dolorem repellat quam vitae reiciendis ut maxime
+                                odio quas delectus qui? Iusto, ipsa.
+                            </p>
+                            <Image
+                                src={placeholder}
+                                alt="placeholder image"
+                                width={800}
+                                height={100}
+                                className="mt-10"
+                            />
+                            <p className="mx-20 text-slate-500 italic">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Fuga quasi illo mollitia
+                                perferendis, odit adipisci assumenda esse
+                                dolorem repellat quam vitae reiciendis ut maxime
+                                odio quas delectus qui? Iusto, ipsa.
+                            </p>
+                            <Image
+                                src={placeholder}
+                                alt="placeholder image"
+                                width={800}
+                                height={100}
+                                className="mt-10"
+                            />
+                            <p className="mx-20 text-slate-500 italic">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Fuga quasi illo mollitia
+                                perferendis, odit adipisci assumenda esse
+                                dolorem repellat quam vitae reiciendis ut maxime
+                                odio quas delectus qui? Iusto, ipsa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 }
