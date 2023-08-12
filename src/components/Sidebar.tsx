@@ -5,11 +5,11 @@ import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function Sidebar() {
     return (
-        <div className="fixed left-0 flex flex-col mt-20 mx-10 w-80 mb-10 p-2">
+        <div className="lg:fixed sm:relative left-0 flex lg:flex-col md:flex-row mt-20 mx-10 w-80 mb-10 p-2 lg:w-1/5 ">
             <div className="flex flex-col h-full justify-between">
                 <div className="flex flex-col w-full ">
                     <div className="flex">
-                        <div className="w-2/3">
+                        <div className="lg:w-2/3">
                             <Image
                                 src={profilePic}
                                 alt="Kendall Cercone photo"

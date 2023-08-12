@@ -29,11 +29,15 @@ export default function Home() {
             />
             {!loading && <Navigation />}
             {!loading && <Sidebar />}
-            <section className={`about ${hideDuringLoading(loading)} flex justify-end`}>
+            <section
+                className={`about ${hideDuringLoading(
+                    loading
+                )} flex justify-end`}
+            >
                 <div className="flex min-w-full">
                     <div className="w-full mt-20 flex justify-end">
-                        <div className="w-2/3">
-                            <p className="text-slate-00">
+                        <div className="lg:w-2/3 sm:w-full">
+                            <p className="text-slate-700">
                                 {`Hey, I'm Kendall. What started as a hobby turned
                             into a passionate pursuit, propelling me into the
                             dynamic world of technology. With a background in
@@ -48,8 +52,12 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className={`projects ${hideDuringLoading(loading)} flex justify-end`}>
-                <div className="flex w-2/3 justify-end">
+            <section
+                className={`projects ${hideDuringLoading(
+                    loading
+                )} flex justify-end`}
+            >
+                <div className="flex lg:w-2/3 sm:w-full justify-end">
                     <div className=" mt-10 flex justify-center">
                         <div className="flex flex-col items-center">
                             <h1 className="text-2xl">Projects</h1>
@@ -60,7 +68,7 @@ export default function Home() {
                                 height={100}
                                 className="mt-10"
                             />
-                            <p className="mx-20 text-slate-500 italic">
+                            <p className="text-slate-500 italic">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Fuga quasi illo mollitia
                                 perferendis, odit adipisci assumenda esse
@@ -74,7 +82,7 @@ export default function Home() {
                                 height={100}
                                 className="mt-10"
                             />
-                            <p className="mx-20 text-slate-500 italic">
+                            <p className="text-slate-500 italic">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Fuga quasi illo mollitia
                                 perferendis, odit adipisci assumenda esse
@@ -88,7 +96,7 @@ export default function Home() {
                                 height={100}
                                 className="mt-10"
                             />
-                            <p className="mx-20 text-slate-500 italic">
+                            <p className="text-slate-500 italic">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Fuga quasi illo mollitia
                                 perferendis, odit adipisci assumenda esse
