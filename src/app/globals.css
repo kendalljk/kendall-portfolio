@@ -9,13 +9,20 @@
   font-family: var(--font-lato);
 }
 
+body{
+    background-image: url('https://images.pexels.com/photos/7135054/pexels-photo-7135054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-oswald);
 }
 
 .skill-buttons {
-  background-color: rgb(22 78 99);
-  color: rgb(252, 205, 164);
+  background-color: rgb(14 116 144);
+  color: white;
   border-radius: 15px;
   width:min-content;
   padding: 0 .5rem;
@@ -24,5 +31,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icons:hover {
-  color:rgb(252, 205, 164) !important;
+  color:rgb(254 215 170) !important;
 }

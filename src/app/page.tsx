@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 import Sidebar from "../components/Sidebar";
 import LoadingPage from "../components/LoadingPage";
 import Image from "next/image";
-import placeholder from "../app/icons/photos/placeholder.jpg";
+import placeholder from "../app/resources/placeholder.jpg";
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState(true);
@@ -32,22 +32,15 @@ export default function Home() {
             <section
                 className={`about ${hideDuringLoading(
                     loading
-                )} flex justify-end`}
+                )} flex min-w-full justify-end`}
             >
-                <div className="flex min-w-full">
-                    <div className="w-full mt-20 flex justify-end">
-                        <div className="lg:w-2/3 sm:w-full">
+                <div className="flex w-full justify-end">
+                    <div className="lg:w-2/3 md:w-full mt-20 px-10 flex justify-center">
+                        <div className="">
                             <p className="text-slate-700">
-                                {`Hey, I'm Kendall. What started as a hobby turned
-                            into a passionate pursuit, propelling me into the
-                            dynamic world of technology. With a background in
-                            healthcare and communication, I've learned the
-                            importance of attention to detail and a resillient
-                            and collaborative approach to problem-solving. Now,
-                            as I dive into coding, I'm excited to bring that
-                            same dedication to creating innovative and
-                            user-centered web experiences.`}
+                                {`Hey, I'm Kendall. My journey in the healthcare sector has seen me working as a Physical Therapist Assistant specializing in the LTAC and SNF settings. In this role, I work with individuals during some of the most challenging periods of their lives, assisting them to regain physical wellbeing and strive for a return to full functionality. Working in healthcare, part of my responsibilities were to  immerse myself in and make efficient use of various EMR software technologies, gaining insights that go beyond the surface. During a hospital wide transition to a new software, I functioned as an SME to assist with providing initial and follow up coachings to hospital staff to help ensure successful integration.`}
                             </p>
+                            <p className="mt-5 text-slate-700">{`These hands-on experiences have provided me with deep insights and cultivated a genuine appreciation for the tangible benefits that technology can bring to improving processes and providing positive change. This perspective fuels my motivation to channel my technical skills and unwavering commitment into creating innovative, user-centric web experiences.`}</p>
                         </div>
                     </div>
                 </div>
@@ -55,12 +48,12 @@ export default function Home() {
             <section
                 className={`projects ${hideDuringLoading(
                     loading
-                )} flex justify-end`}
+                )} flex min-w-full justify-end`}
             >
                 <div className="flex lg:w-2/3 sm:w-full justify-end">
                     <div className=" mt-10 flex justify-center">
                         <div className="flex flex-col items-center">
-                            <h1 className="text-2xl">Projects</h1>
+                            <h1 className="text-xl uppercase">Projects</h1>
                             <Image
                                 src={placeholder}
                                 alt="placeholder image"
@@ -68,7 +61,7 @@ export default function Home() {
                                 height={100}
                                 className="mt-10"
                             />
-                            <p className="text-slate-500 italic">
+                            <p className="text-slate-500 italic mx-auto">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Fuga quasi illo mollitia
                                 perferendis, odit adipisci assumenda esse

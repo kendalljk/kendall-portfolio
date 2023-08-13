@@ -1,15 +1,15 @@
-import profilePic from "../app/icons/photos/kendall.png";
+import profilePic from "../app/resources/kendall.png";
 import Image from "next/image";
 import { MdLocationPin } from "react-icons/md";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function Sidebar() {
     return (
-        <div className="lg:fixed sm:relative left-0 flex lg:flex-col md:flex-row mt-20 mx-10 w-80 mb-10 p-2 lg:w-1/5 ">
+        <div className="lg:fixed sm:relative flex flex-col lg:h-screen px-10 lg:w-1/4 md:w-full mx-auto">
             <div className="flex flex-col h-full justify-between">
                 <div className="flex flex-col w-full ">
                     <div className="flex">
-                        <div className="lg:w-2/3">
+                        <div className="lg:w-2/3 pt-20">
                             <Image
                                 src={profilePic}
                                 alt="Kendall Cercone photo"
@@ -19,7 +19,7 @@ export default function Sidebar() {
                             />
                         </div>
                         <div className="w-2/3 flex flex-col justify-center mx-4">
-                            <h1 className="lg:text-lg sm:text-xl tracking-wider text-cyan-950">
+                            <h1 className="lg:text-lg sm:text-xl tracking-wider text-cyan-700">
                                 Kendall Cercone
                             </h1>
                             <div className="flex items-center">
@@ -34,7 +34,7 @@ export default function Sidebar() {
                     </div>
                     <div className="w-full">
                         <em>
-                            <p className="lg:text-lg md:text-sm mx-2 my-5 text-slate-600 tracking-wide">
+                            <p className="flex lg:text-lg md:text-sm mx-2 my-5 text-slate-600 tracking-wide">
                                 {`Full Stack Developer with a
                                             particular passion for blending
                                             front-end creativity with technical
@@ -86,7 +86,7 @@ export default function Sidebar() {
                     </ul>
                 </div>
                 <div className="w-full my-2 mr-2 flex flex-col justify-between">
-                    <div className="flex justify-around">
+                    <div className="flex justify-center">
                         <a
                             href="https://www.linkedin.com/in/kendallcercone"
                             target="_blank"
@@ -96,7 +96,7 @@ export default function Sidebar() {
                                 className="icons"
                                 size={30}
                                 style={{
-                                    color: "rgb(22 78 99)",
+                                    color: "rgb(14 116 144)",
                                 }}
                             />
                         </a>
@@ -109,7 +109,7 @@ export default function Sidebar() {
                                 className="icons"
                                 size={30}
                                 style={{
-                                    color: "rgb(22 78 99)",
+                                    color: "rgb(14 116 144)",
                                 }}
                             />
                         </a>
