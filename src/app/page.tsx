@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="flex lg:w-2/3 sm:w-full justify-end">
                     <div className=" mt-10 flex justify-center">
                         <div className="flex flex-col items-center">
-                            <h1 className="text-xl uppercase">Projects</h1>
+                            <h1 className="text-xl uppercase text-cyan-700">Projects</h1>
                             <Image
                                 src={placeholder}
                                 alt="placeholder image"
