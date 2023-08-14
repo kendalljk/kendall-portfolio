@@ -42,7 +42,7 @@ export default function Sidebar() {
                                             digital experiences.`}
                             </p>
                         </em>
-                        <p className="m-2 text-slate-500">
+                        <aside className="m-2 text-slate-500">
                             {`Outside of work, you can find me `}
                             <span className="font-bold text-cyan-500">
                                 <a href="https://www.powells.com/">
@@ -61,7 +61,7 @@ export default function Sidebar() {
                                     {` Portland Thorns. `}
                                 </a>
                             </span>
-                        </p>
+                        </aside>
                     </div>
                 </div>
                 <div className="w-full mr-2 flex flex-col justify-between">
@@ -93,7 +93,7 @@ export default function Sidebar() {
                             rel="noopener noreferrer"
                         >
                             <FaLinkedin
-                                className="icons"
+                                className="icons m-5"
                                 size={30}
                                 style={{
                                     color: "rgb(14 116 144)",
@@ -106,7 +106,7 @@ export default function Sidebar() {
                             rel="noopener noreferrer"
                         >
                             <FaGithubSquare
-                                className="icons"
+                                className="icons m-5"
                                 size={30}
                                 style={{
                                     color: "rgb(14 116 144)",
