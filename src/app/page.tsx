@@ -60,8 +60,8 @@ export default function Home() {
                                 <Image
                                     src={placeholder}
                                     alt="placeholder image"
-                                    width={800}
-                                    height={100}
+                                    width={1000}
+                                    height={1000}
                                     className="mt-10"
                                 />
                                 <figcaption className="text-slate-500 italic mx-auto">
@@ -76,8 +76,8 @@ export default function Home() {
                                 <Image
                                     src={placeholder}
                                     alt="placeholder image"
-                                    width={800}
-                                    height={100}
+                                    width={1000}
+                                    height={1000}
                                     className="mt-10"
                                 />
                                 <figcaption className="text-slate-500 italic">
@@ -92,8 +92,8 @@ export default function Home() {
                                 <Image
                                     src={placeholder}
                                     alt="placeholder image"
-                                    width={800}
-                                    height={100}
+                                    width={1000}
+                                    height={1000}
                                     className="mt-10"
                                 />
                                 <figcaption className="text-slate-500 italic">

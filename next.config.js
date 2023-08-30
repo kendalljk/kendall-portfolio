@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+module.exports = {
+    env: {
+        FORMSPREE_ENDPOINT: process.env.FORMSPREE_ENDPOINT,
+    },
+};

@@ -33,3 +33,19 @@ h1, h2, h3, h4, h5, h6 {
 .icons:hover {
   color:rgb(254 215 170) !important;
 }
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: medium;
+}
+
+
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+}

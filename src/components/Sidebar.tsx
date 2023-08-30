@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function Sidebar() {
     return (
-        <div className="lg:fixed sm:relative flex flex-col lg:h-screen px-10 lg:w-1/4 md:w-full mx-auto">
+        <div className="lg:fixed sm:relative flex flex-col lg:h-screen px-10 xl:w-1/4 lg:w-1/3 md:w-full mx-auto">
             <div className="flex flex-col h-full justify-between">
                 <div className="flex flex-col w-full ">
                     <div className="flex">
