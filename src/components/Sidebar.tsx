@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function Sidebar() {
     return (
-        <div className="lg:fixed sm:relative flex flex-col lg:h-screen px-10 xl:w-1/4 lg:w-1/3 md:w-full mx-auto">
+        <div className="lg:fixed sm:relative flex flex-col lg:h-screen px-10 lg:w-1/4 md:w-full mx-auto">
             <div className="flex flex-col h-full justify-between">
                 <div className="flex flex-col w-full ">
                     <div className="flex">
@@ -13,13 +13,13 @@ export default function Sidebar() {
                             <Image
                                 src={profilePic}
                                 alt="Kendall Cercone photo"
-                                width={200}
-                                max-height={100}
+                                width={300}
+                                max-height={200}
                                 className="rounded-full mx-2 border-2 border-dotted"
                             />
                         </div>
-                        <div className="w-2/3 flex flex-col justify-center mx-4">
-                            <h1 className="lg:text-lg sm:text-xl tracking-wider text-cyan-700">
+                        <div className="w-2/3 flex flex-col justify-center pl-3 pt-20">
+                            <h1 className="text-3xl tracking-wider text-cyan-700">
                                 Kendall Cercone
                             </h1>
                             <div className="flex items-center">
@@ -34,7 +34,7 @@ export default function Sidebar() {
                     </div>
                     <div className="w-full">
                         <em>
-                            <p className="flex lg:text-lg md:text-sm mx-2 my-5 text-slate-600 tracking-wide">
+                            <p className="text-lg font-bold mx-2 my-5 text-slate-600 tracking-wide">
                                 {`Full Stack Developer with a
                                             particular passion for blending
                                             front-end creativity with technical
@@ -42,7 +42,7 @@ export default function Sidebar() {
                                             digital experiences.`}
                             </p>
                         </em>
-                        <aside className="m-2 text-slate-500">
+                        <aside className="m-2 text-slate-500 text-lg">
                             {`Outside of work, you can find me `}
                             <span className="font-bold text-cyan-500">
                                 <a href="https://www.powells.com/">
@@ -64,12 +64,11 @@ export default function Sidebar() {
                         </aside>
                     </div>
                 </div>
-                <div className="w-full mr-2 flex flex-col justify-between">
-                    <ul className="mx-4 flex flex-wrap">
+                <div className="w-full mr-2">
+                    <ul className="mx-4 flex flex-wrap justify-center">
                         <li className="skill-buttons">JavaScript</li>
                         <li className="skill-buttons">HTML</li>
                         <li className="skill-buttons">CSS</li>
-                        <li className="skill-buttons">SCSS</li>
                         <li className="skill-buttons">TypeScript</li>
 
                         <li className="skill-buttons">React</li>
@@ -94,7 +93,7 @@ export default function Sidebar() {
                         >
                             <FaLinkedin
                                 className="icons m-5"
-                                size={30}
+                                size={50}
                                 style={{
                                     color: "rgb(14 116 144)",
                                 }}
@@ -107,7 +106,7 @@ export default function Sidebar() {
                         >
                             <FaGithubSquare
                                 className="icons m-5"
-                                size={30}
+                                size={50}
                                 style={{
                                     color: "rgb(14 116 144)",
                                 }}

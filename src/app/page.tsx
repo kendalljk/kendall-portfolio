@@ -30,30 +30,14 @@ export default function Home() {
             {!loading && <Navigation />}
             {!loading && <Sidebar />}
             <section
-                className={`about ${hideDuringLoading(
-                    loading
-                )} flex min-w-full justify-end`}
-            >
-                <div className="flex lg:w-2/3 sm:w-full justify-end">
-                    <div className="mt-20 flex justify-center">
-                        <div className="lg:w-2/3 md:w-full">
-                            <p className="text-slate-700">
-                                {`Hey, I'm Kendall. My journey in the healthcare sector has seen me working as a Physical Therapist Assistant specializing in the LTAC and SNF settings. In this role, I work with individuals during some of the most challenging periods of their lives, assisting them to regain physical wellbeing and strive for a return to full functionality. Working in healthcare, part of my responsibilities were to  immerse myself in and make efficient use of various EMR software technologies, gaining insights that go beyond the surface. During a hospital wide transition to a new software, I functioned as an SME to assist with providing initial and follow up coachings to hospital staff to help ensure successful integration.`}
-                            </p>
-                            <p className="mt-5 text-slate-700">{`These hands-on experiences have provided me with deep insights and cultivated a genuine appreciation for the tangible benefits that technology can bring to improving processes and providing positive change. This perspective fuels my motivation to channel my technical skills and unwavering commitment into creating innovative, user-centric web experiences.`}</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section
                 className={`projects ${hideDuringLoading(
                     loading
                 )} flex min-w-full justify-end`}
             >
-                <div className="flex lg:w-2/3 sm:w-full justify-end">
-                    <div className=" mt-10 flex justify-center">
+                <div className="flex lg:w-2/3 sm:w-full justify-end px-10">
+                    <div className=" mt-20 flex justify-center">
                         <div className="flex flex-col items-center">
-                            <h1 className="text-xl uppercase text-cyan-700">
+                            <h1 className="text-3xl uppercase text-cyan-700">
                                 Projects
                             </h1>
                             <figure className="lg:w-2/3 md:w-full">

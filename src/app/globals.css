@@ -7,6 +7,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: var(--font-lato);
+  font-size: large;
 }
 
 body{
@@ -25,13 +26,13 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   border-radius: 15px;
   width:min-content;
-  padding: 0 .5rem;
+  padding: 1rem;
   margin: .5rem .25rem 0 0 ;
   white-space: nowrap;
 }
 
 .icons:hover {
-  color:rgb(254 215 170) !important;
+  color:rgb(235, 175, 107) !important;
 }
 
 input {
