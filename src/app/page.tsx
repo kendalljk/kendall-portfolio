@@ -6,6 +6,7 @@ import Sidebar from "../components/Sidebar";
 import LoadingPage from "../components/LoadingPage";
 import Image from "next/image";
 import placeholder from "../app/resources/placeholder.jpg";
+import Project from "../components/Project";
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState(true);
@@ -37,57 +38,21 @@ export default function Home() {
                 <div className="flex lg:w-2/3 sm:w-full justify-end px-10">
                     <div className=" mt-20 flex justify-center">
                         <div className="flex flex-col items-center">
-                            <h1 className="text-3xl uppercase text-cyan-700">
+                            <h1 className="text-2xl uppercase text-cyan-700">
                                 Projects
                             </h1>
-                            <figure className="lg:w-2/3 md:w-full">
-                                <Image
-                                    src={placeholder}
-                                    alt="placeholder image"
-                                    width={1000}
-                                    height={1000}
-                                    className="mt-10"
-                                />
-                                <figcaption className="text-slate-500 italic mx-auto">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Fuga quasi illo mollitia
-                                    perferendis, odit adipisci assumenda esse
-                                    dolorem repellat quam vitae reiciendis ut
-                                    maxime odio quas delectus qui? Iusto, ipsa.
-                                </figcaption>
-                            </figure>
-                            <figure className="lg:w-2/3 md:w-full">
-                                <Image
-                                    src={placeholder}
-                                    alt="placeholder image"
-                                    width={1000}
-                                    height={1000}
-                                    className="mt-10"
-                                />
-                                <figcaption className="text-slate-500 italic">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Fuga quasi illo mollitia
-                                    perferendis, odit adipisci assumenda esse
-                                    dolorem repellat quam vitae reiciendis ut
-                                    maxime odio quas delectus qui? Iusto, ipsa.
-                                </figcaption>
-                            </figure>
-                            <figure className="lg:w-2/3 md:w-full">
-                                <Image
-                                    src={placeholder}
-                                    alt="placeholder image"
-                                    width={1000}
-                                    height={1000}
-                                    className="mt-10"
-                                />
-                                <figcaption className="text-slate-500 italic">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Fuga quasi illo mollitia
-                                    perferendis, odit adipisci assumenda esse
-                                    dolorem repellat quam vitae reiciendis ut
-                                    maxime odio quas delectus qui? Iusto, ipsa.
-                                </figcaption>
-                            </figure>
+                            <Project
+                                title={`Photographer Website`}
+                                description={`I worked closely with the photographer to create a visually appealing portfolio while utilizing the Flickr API to offload media storage, allow for automatic updates, and ensure faster page loading.`}
+                                link={``}
+                                video={``}
+                            />
+                            <Project
+                                title={`Shelf Help`}
+                                description={`I worked closely with the photographer to create a visually appealing portfolio while utilizing the Flickr API to offload media storage, allow for automatic updates, and ensure faster page loading.`}
+                                link={`https://next-shelf-help.vercel.app/`}
+                                video={``}
+                            />
                         </div>
                     </div>
                 </div>

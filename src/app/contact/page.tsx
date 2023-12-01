@@ -21,10 +21,10 @@ export default function Contact() {
             <Navigation />
             <div className="flex flex-col min-h-screen align-middle justify-between items-center">
                 <div className="lg:w-1/3 w-1/2 text-2xl">
-                    <h1 className="text-3xl uppercase text-cyan-700 text-center pt-20">
+                    <h1 className="text-2xl uppercase text-cyan-700 text-center pt-20">
                         Contact Me
                     </h1>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="flex flex-col">
                         <label htmlFor="name" className="font-bold">
                             Full Name:
                         </label>
@@ -63,7 +63,7 @@ export default function Contact() {
                         <textarea
                             id="message"
                             name="message"
-                            rows={5}
+                            rows={3}
                             required
                         />
                         <ValidationError
@@ -74,24 +74,22 @@ export default function Contact() {
                         <button
                             type="submit"
                             disabled={state.submitting}
-                            className="block mx-auto mt-20 bg-cyan-700 py-2 px-4 rounded-2xl text-slate-50 hover:font-bold"
+                            className="block mx-auto mt-5 bg-cyan-700 px-4 rounded-full text-slate-50 hover:font-bold
+                            active:bg-cyan-800"
                         >
                             Submit
                         </button>
                     </form>
                 </div>
-                <div className="flex justify-center gap-20 mb-20">
+                <div className="flex justify-center gap-20 my-10">
                     <a
                         href="https://www.linkedin.com/in/kendallcercone"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <FaLinkedin
-                            size={50}
-                            style={{
-                                color: "rgb(14 116 144)",
-                            }}
-                            className="icons"
+                            size={30}
+                            className="text-cyan-700 hover:text-orange-300"
                         />
                     </a>
                     <a
@@ -100,11 +98,8 @@ export default function Contact() {
                         rel="noopener noreferrer"
                     >
                         <FaGithubSquare
-                            size={50}
-                            style={{
-                                color: "rgb(14 116 144)",
-                            }}
-                            className="icons"
+                            size={30}
+                            className="text-cyan-700 hover:text-orange-300"
                         />
                     </a>
                 </div>

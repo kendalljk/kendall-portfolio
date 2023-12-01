@@ -9,7 +9,7 @@ export default function Sidebar() {
             <div className="flex flex-col h-full justify-between">
                 <div className="flex flex-col w-full ">
                     <div className="flex">
-                        <div className="lg:w-2/3 pt-20">
+                        <div className="lg:w-2/3 pt-12">
                             <Image
                                 src={profilePic}
                                 alt="Kendall Cercone photo"
@@ -18,85 +18,103 @@ export default function Sidebar() {
                                 className="rounded-full mx-2 border-2 border-dotted"
                             />
                         </div>
-                        <div className="w-2/3 flex flex-col justify-center pl-3 pt-20">
-                            <h1 className="text-3xl tracking-wider text-cyan-700">
+                        <div className="w-2/3 flex flex-col justify-center pl-5 pt-20">
+                            <h1 className="text-2xl tracking-wider text-cyan-700">
                                 Kendall Cercone
                             </h1>
                             <div className="flex items-center">
-                                <MdLocationPin
-                                    style={{
-                                        color: "rgb(252, 205, 164)",
-                                    }}
-                                />
-                                <p className="ml-2">Portland, OR</p>
+                                <MdLocationPin className="text-orange-200" />
+                                <p className="ml-2">Evanston, IL</p>
                             </div>
                         </div>
                     </div>
                     <div className="w-full">
                         <em>
-                            <p className="text-lg font-bold mx-2 my-5 text-slate-600 tracking-wide">
-                                {`Full Stack Developer with a
-                                            particular passion for blending
-                                            front-end creativity with technical
-                                            precision to create compelling
-                                            digital experiences.`}
+                            <p className="text-lg font-bold mx-2 my-5 text-slate-500 tracking-wide text-center">
+                                {`Full Stack Developer with a passion for blending
+front-end creativity with technical
+precision to create compelling
+digital experiences.`}
                             </p>
                         </em>
-                        <aside className="m-2 text-slate-500 text-lg">
+                        <aside className="m-2 text-slate-500">
                             {`Outside of work, you can find me `}
                             <span className="font-bold text-cyan-500">
-                                <a href="https://www.powells.com/">
+                                <a href="https://www.traillink.com/trail/chicago-lakefront-trail/">
+                                    {` biking the trails `}
+                                </a>
+                            </span>
+                            {` with my husband,`}
+                            <span className="font-bold text-cyan-500">
+                                <a href="https://next-shelf-help.vercel.app/">
                                     {` reading `}
                                 </a>
                             </span>
-                            {` at the park,`}
-                            <span className="font-bold text-cyan-500">
-                                <a href="https://www.oregonhikers.org/field_guide/Main_Page">
-                                    {` hiking around Oregon `}
-                                </a>
-                            </span>
-                            {` with my husband, or cheering on the `}
-                            <span className="font-bold text-cyan-500 hover:text-green-700 hover:bg-slate-800">
+                            {` on my balcony, or cheering on the  `}
+                            <span className="font-bold text-cyan-500 hover:text-red-700 hover:bg-sky-300">
                                 <a href="https://www.timbers.com/thornsfc/schedule/">
-                                    {` Portland Thorns. `}
+                                    {` Chicago Redstars. `}
                                 </a>
                             </span>
                         </aside>
                     </div>
                 </div>
-                <div className="w-full mr-2">
-                    <ul className="mx-4 flex flex-wrap justify-center">
-                        <li className="skill-buttons">JavaScript</li>
-                        <li className="skill-buttons">HTML</li>
-                        <li className="skill-buttons">CSS</li>
-                        <li className="skill-buttons">TypeScript</li>
-
-                        <li className="skill-buttons">React</li>
-                        <li className="skill-buttons">Next.js</li>
-                        <li className="skill-buttons">Tailwind</li>
-                        <li className="skill-buttons">Bootstrap</li>
-                        <li className="skill-buttons">Material UI</li>
-
-                        <li className="skill-buttons">Git</li>
-                        <li className="skill-buttons">Github</li>
-                        <li className="skill-buttons">Vercel</li>
-                        <li className="skill-buttons">Figma</li>
-                        <li className="skill-buttons">Canva</li>
+                <div className="w-full">
+                    <ul className="mx-2 flex flex-wrap justify-center text-xs">
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            HTML
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            CSS
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            TypeScript
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            React
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            JavaScript
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Next.js
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Tailwind
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Bootstrap
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Material UI
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Git
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Github
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Vercel
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Figma
+                        </li>
+                        <li className="mx-1 bg-cyan-700 text-white p-1 rounded my-1">
+                            Canva
+                        </li>
                     </ul>
                 </div>
                 <div className="w-full my-2 mr-2 flex flex-col justify-between">
-                    <div className="flex justify-center">
+                    <div className="flex justify-center gap-10">
                         <a
                             href="https://www.linkedin.com/in/kendallcercone"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <FaLinkedin
-                                className="icons m-5"
-                                size={50}
-                                style={{
-                                    color: "rgb(14 116 144)",
-                                }}
+                                className="text-cyan-700 hover:text-orange-300"
+                                size={30}
                             />
                         </a>
                         <a
@@ -105,11 +123,8 @@ export default function Sidebar() {
                             rel="noopener noreferrer"
                         >
                             <FaGithubSquare
-                                className="icons m-5"
-                                size={50}
-                                style={{
-                                    color: "rgb(14 116 144)",
-                                }}
+                                className="text-cyan-700 hover:text-orange-300"
+                                size={30}
                             />
                         </a>
                     </div>

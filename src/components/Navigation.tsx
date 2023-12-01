@@ -20,7 +20,7 @@ const Navigation = () => {
             <div className="navlinks my-4 text-sm text-cyan-800 self-center uppercase w-full flex justify-between">
                 <div>
                     <Link href="/">
-                        <h2 className="px-10 text-3xl uppercase font-oswald justify-self-center text-orange-300">
+                        <h2 className="px-10 text-2xl uppercase font-oswald justify-self-center text-orange-300">
                             KC
                         </h2>
                     </Link>
@@ -29,11 +29,11 @@ const Navigation = () => {
                     <div className="px-10 pt-3">
                         <FaBars
                             onClick={toggleDropdown}
-                            size={40}
+                            size={30}
                             className="cursor-pointer"
                         />
                         {isDropdownOpen && (
-                            <div className="absolute mt-2 mr-5 text-right right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                            <div className="absolute mt-2 mr-5 text-right right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 text-xs">
                                 <div
                                     className="py-1"
                                     role="menu"
@@ -42,7 +42,7 @@ const Navigation = () => {
                                 >
                                     <Link
                                         href="/"
-                                        className={`block px-4 py-2 text-lg ${
+                                        className={`block px-4 py-2 ${
                                             pathname === "/"
                                                 ? "underline underline-offset-8"
                                                 : ""
@@ -51,10 +51,20 @@ const Navigation = () => {
                                         Home
                                     </Link>
                                     <Link
+                                        href="/about"
+                                        className={`block px-4 py-2 ${
+                                            pathname === "/about"
+                                                ? "underline underline-offset-8"
+                                                : ""
+                                        }`}
+                                    >
+                                        About
+                                    </Link>
+                                    <Link
                                         href="/Kendall%20Cercone%20Full%20Stack%20Developer.png"
                                         target="_blank"
                                         download="Kendall Cercone Resume.png"
-                                        className={`block px-4 py-2 text-lg ${
+                                        className={`block px-4 py-2 ${
                                             pathname === "/resume"
                                                 ? "underline underline-offset-8"
                                                 : ""
@@ -64,7 +74,7 @@ const Navigation = () => {
                                     </Link>
                                     <Link
                                         href="/contact"
-                                        className={`block px-4 py-2 text-lg ${
+                                        className={`block px-4 py-2 ${
                                             pathname === "/contact"
                                                 ? "underline underline-offset-8"
                                                 : ""
