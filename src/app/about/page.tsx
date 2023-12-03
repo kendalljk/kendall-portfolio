@@ -1,6 +1,7 @@
 "use client";
 import Navigation from "@@component/component/components/Navigation";
 import React from "react";
+import Image from "next/image";
 
 export default function About() {
     return (
@@ -8,7 +9,11 @@ export default function About() {
             <div className="w-full flex flex-col justify-center items-center pt-12">
                 <div className="w-1/2 text-center">
                     <div className="">
-                        <img src="/kendall-photo.jpg" className="" />
+                        <Image
+                            src="/kendall-photo.jpg"
+                            className=""
+                            alt="Two people standing with in front of a sunset with their backs to the camera"
+                        />
                     </div>
                     <p className="my-2">
                         <span className="font-bold text-apricot">{`Hi, I'm Kendall. `}</span>{" "}

@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import { FaDoorOpen } from "react-icons/fa";
+import Image from "next/image";
 
-export default function Project({
+interface ProjectProps {
+    title: string;
+    image: string;
+    video: string;
+    description: string;
+    keyFeatures: string[]; 
+    link: string;
+    languages: string;
+}
+
+const Project: React.FC<ProjectProps> = ({
     title,
     image,
     video,
-  description,
+    description,
     keyFeatures,
     link,
     languages,
-}) {
+}) => {
     const [isVideoVisible, setIsVideoVisible] = useState(false);
 
     const showVideo = () => {
@@ -26,7 +37,11 @@ export default function Project({
                 className={`w-full relative ${isVideoVisible ? "hidden" : ""}`}
                 onClick={showVideo}
             >
-                <img src={image} className="opacity-30 w-full" />
+                <Image
+                    src={image}
+                    className="opacity-30 w-full"
+                    alt={`Initial mockup design for project`}
+                />
                 <div className="w-full">
                     <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-bold text-vibrant-blue-gray project-header uppercase tracking-tighter text-[8vw] hover:cursor-pointer hover:text-vibrant-sage-green">
                         {title}
@@ -44,7 +59,7 @@ export default function Project({
                     <h3 className="text-orange-300">{languages}</h3>
                     <p className="italic">{description}</p>
                     <ul>
-                        {keyFeatures.map((feature, index) => (
+                        {keyFeatures.map((feature, index: number) => (
                             <li key={index} className="list-disc text-sm ml-10">
                                 {feature}
                             </li>
@@ -74,4 +89,6 @@ export default function Project({
             </div>
         </figure>
     );
-}
+};
+
+export default Project

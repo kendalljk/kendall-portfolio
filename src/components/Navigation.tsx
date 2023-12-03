@@ -8,7 +8,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
 
-    const isActive = (path) => {
+    const isActive = (path:string) => {
         return `text-blue-gray hover:text-orange-300 ${
             pathname === path ? "text-orange-400" : ""
         }`;
