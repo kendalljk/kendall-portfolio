@@ -1,91 +1,35 @@
 "use client";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import resumeImage from "../../public/Kendall Cercone Full Stack Developer.png";
-import { FaBars } from "react-icons/fa";
 
 const Navigation = () => {
-    const pathname = usePathname();
+    const router = useRouter();
+  const pathname = usePathname();
 
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggleDropdown = (event) => {
-        event.preventDefault();
-        setDropdownOpen(!isDropdownOpen);
+    const isActive = (path) => {
+        return `text-blue-gray hover:text-orange-300 ${
+            pathname === path ? "text-orange-400" : ""
+        }`;
     };
 
     return (
-        <nav className={`flex w-full fixed top-0 font-lato  z-10`}>
-            <div className="navlinks my-4 text-sm text-cyan-800 self-center uppercase w-full flex justify-between">
-                <div>
+        <nav className={`flex w-full absolute top-0 z-1 navbar`}>
+            <div className="my-1 text-sm text-cyan-800 self-center uppercase w-full flex justify-between">
+                <div className="w-full flex justify-center gap-5 px-5 text-xl uppercase">
                     <Link href="/">
-                        <h2 className="px-10 text-2xl uppercase font-oswald justify-self-center text-orange-300">
-                            KC
-                        </h2>
+                        <h2 className={isActive("/")}>Home</h2>
                     </Link>
-                </div>
-                <div>
-                    <div className="px-10 pt-3">
-                        <FaBars
-                            onClick={toggleDropdown}
-                            size={30}
-                            className="cursor-pointer"
-                        />
-                        {isDropdownOpen && (
-                            <div className="absolute mt-2 mr-5 text-right right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 text-xs">
-                                <div
-                                    className="py-1"
-                                    role="menu"
-                                    aria-orientation="vertical"
-                                    aria-labelledby="options-menu"
-                                >
-                                    <Link
-                                        href="/"
-                                        className={`block px-4 py-2 ${
-                                            pathname === "/"
-                                                ? "underline underline-offset-8"
-                                                : ""
-                                        }`}
-                                    >
-                                        Home
-                                    </Link>
-                                    <Link
-                                        href="/about"
-                                        className={`block px-4 py-2 ${
-                                            pathname === "/about"
-                                                ? "underline underline-offset-8"
-                                                : ""
-                                        }`}
-                                    >
-                                        About
-                                    </Link>
-                                    <Link
-                                        href="/Kendall%20Cercone%20Full%20Stack%20Developer.png"
-                                        target="_blank"
-                                        download="Kendall Cercone Resume.png"
-                                        className={`block px-4 py-2 ${
-                                            pathname === "/resume"
-                                                ? "underline underline-offset-8"
-                                                : ""
-                                        }`}
-                                    >
-                                        Resume
-                                    </Link>
-                                    <Link
-                                        href="/contact"
-                                        className={`block px-4 py-2 ${
-                                            pathname === "/contact"
-                                                ? "underline underline-offset-8"
-                                                : ""
-                                        }`}
-                                    >
-                                        Contact
-                                    </Link>
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                    <Link href="/about">
+                        <h2 className={isActive("/about")}>About</h2>
+                    </Link>
+                    <Link href="/projects">
+                        <h2 className={isActive("/projects")}>Projects</h2>
+                    </Link>
+                    <Link href="/contact">
+                        <h2 className={isActive("/contact")}>Contact</h2>
+                    </Link>
                 </div>
             </div>
         </nav>

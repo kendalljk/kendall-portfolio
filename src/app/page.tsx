@@ -1,62 +1,88 @@
 "use client";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import Navigation from "../components/Navigation";
-import Sidebar from "../components/Sidebar";
-import LoadingPage from "../components/LoadingPage";
+import profilePic from "../app/resources/kendall.png";
 import Image from "next/image";
-import placeholder from "../app/resources/placeholder.jpg";
-import Project from "../components/Project";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-    const [isVisible, setIsVisible] = useState(true);
-    const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
-    const hideDuringLoading = (loading: boolean) => {
-        if (loading === true) {
-            return `hidden`;
-        } else {
-            return ``;
-        }
+  const goToAbout = () => {
+      router.push('/about')
     };
 
     return (
-        <main className="flex flex-col min-h-screen min-w-full">
-            <LoadingPage
-                isVisible={isVisible}
-                setIsVisible={setIsVisible}
-                loading={loading}
-                setLoading={setLoading}
-            />
-            {!loading && <Navigation />}
-            {!loading && <Sidebar />}
-            <section
-                className={`projects ${hideDuringLoading(
-                    loading
-                )} flex min-w-full justify-end`}
-            >
-                <div className="flex lg:w-2/3 sm:w-full justify-end px-10">
-                    <div className=" mt-20 flex justify-center">
-                        <div className="flex flex-col items-center">
-                            <h1 className="text-2xl uppercase text-cyan-700">
-                                Projects
-                            </h1>
-                            <Project
-                                title={`Photographer Website`}
-                                description={`I worked closely with the photographer to create a visually appealing portfolio while utilizing the Flickr API to offload media storage, allow for automatic updates, and ensure faster page loading.`}
-                                link={``}
-                                video={``}
-                            />
-                            <Project
-                                title={`Shelf Help`}
-                                description={`I worked closely with the photographer to create a visually appealing portfolio while utilizing the Flickr API to offload media storage, allow for automatic updates, and ensure faster page loading.`}
-                                link={`https://next-shelf-help.vercel.app/`}
-                                video={``}
-                            />
-                        </div>
+        <main className="flex flex-col min-h-screen min-w-full ">
+            <div className="w-full flex flex-col items-center justify-center mt-20">
+                <Image
+                    src={profilePic}
+                    alt="Kendall Cercone photo"
+                    width={250}
+                    className="rounded-full mx-2 mt-10"
+                />
+                <div className="flex flex-col items-center text-center mt-5">
+                    <div>
+                        <h1 className="text-4xl text-forest-green">
+                            Kendall Cercone
+                        </h1>
+                        <h2 className="text-2xl text-sage-green">
+                            Full Stack Web Developer
+                        </h2>
+                    </div>
+                    <hr className="w-1/2 border-2 border-sage-green my-10" />
+                    <div className="w-2/3">
+                        <p className="">
+                            <i>
+                                Illinois based web developer driven by a fusion
+                                of creativity and a relentless pursuit to solve
+                                complex challenges. I strive to create visually
+                                captivating designs while enriching the user
+                                experience with depth and innovation.
+                            </i>{" "}
+                            Outside, of work you can find me{" "}
+                            <a
+                                href="https://www.traillink.com/trailsearch/?zipcode=60201"
+                                className="hover:font-bold hover:italic hover:text-apricot"
+                            >
+                                biking the trails
+                            </a>{" "}
+                            with my husband,{" "}
+                            <a
+                                href="https://next-shelf-help.vercel.app/"
+                                className="hover:font-bold hover:italic hover:text-apricot"
+                            >
+                                reading on my balcony
+                            </a>
+                            , or cheering on the{" "}
+                            <a
+                                href="https://chicagoredstars.com/schedule"
+                                className="hover-text-red hover:italic hover:font-bold"
+                            >
+                                Chicago Red Stars.
+                            </a>
+                        </p>
+                    </div>
+                    <div>
+                        <button
+                            className="bg-sage-green hover:bg-vibrant-sage-green
+                active:bg-forest-green
+                focus:outline-none
+                focus:ring
+                focus:ring-sage-green
+                disabled:bg-gray-400
+                disabled:cursor-not-allowed
+                text-white
+                py-2
+                px-4
+                rounded-full
+                items-center
+                w-fit m-auto mt-10"
+                            onClick={goToAbout}
+                        >
+                            Learn more
+                        </button>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
     );
 }

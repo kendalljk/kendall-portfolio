@@ -2,21 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: var(--font-lato);
-  font-size: large;
-}
-
-body{
-    background-image: url('https://images.pexels.com/photos/7135054/pexels-photo-7135054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+body {
+    background-image: url("https://images.pexels.com/photos/7135054/pexels-photo-7135054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 100%;
+    font-family: var(--font-montserrat);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-oswald);
+h1 {
+    font-family: var(--font-merriweather);
+}
+
+h2 {
+    font-family: var(--font-oswald);
+}
+
+p {
+    color: #3e4f5c;
+}
+
+.hover-text-red {
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.hover-text-red::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: width 0.3s;
+}
+
+.hover-text-red:hover {
+    color: red;
+}
+
+.hover-text-red:hover::before {
+    width: 100%;
+    background-color: rgb(141, 182, 255);
+}
+
+.project-header {
+    font-family: var(--font-oswald);
 }
